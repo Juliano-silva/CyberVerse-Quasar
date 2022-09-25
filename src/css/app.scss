@@ -1,0 +1,149 @@
+// app global css in SCSS form
+@font-face {
+  font-family: 'CyberPunk';
+  src: url('../Arquivo/Cyberpunk/CyberwayRiders-lg97d.ttf') format('truetype');
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #121212;
+  color: white;
+}
+#CyberVerse{
+  height: 100vh;
+  background-image: url(../Arquivo/Background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#CyberVerse > h1{
+  color: gold;
+  animation: 5s infinite ease-in-out Cyber;
+  font-family: 'CyberPunk';
+  border: 2px solid transparent;
+  width: 5.5em;
+  margin: auto;
+  margin-top: 15%;
+  font-size: 15em;
+  text-shadow: 2px 2px 25px purple;
+}
+#CyberVerse > h1 > span{
+  display: block;
+  margin-top: 100px;
+}
+@keyframes Cyber{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.9;
+  }
+  50%{
+    opacity: 0.7;
+    animation-delay: 2s;
+    text-shadow: 5px 5px 25px purple;
+  }
+  75%{
+    opacity: 0.5;
+    animation-delay: 4s;
+    text-shadow: 10px 10px 25px purple;
+  }
+  100%{
+    opacity: 0.3;
+    animation-delay: 6s;
+    text-shadow: 15px 15px 25px purple;
+
+  }
+}
+#AdicionarCorpo{
+  border: 2px solid transparent;
+  height: 30em;
+  border-radius: 0px 0px 40px 40px ;
+  background-image: url(../Arquivo/Cyber.gif);
+  background-repeat:  no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#AdicionarCorpo > form > input::placeholder{
+  color: white;
+}
+#AdicionarCorpo > form > input{
+  display: block;
+  border: 2px solid transparent;
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  height: 3em;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  background: transparent;
+}
+#AdicionarCorpo > form > input:nth-child(7){
+  border: 2px solid purple;
+  background: #121212;
+  width: 40%;
+  cursor: pointer;
+}
+#AdicionarCorpo > form > input:nth-child(7):hover{
+  filter: invert(1);
+}
+#CorpoCyberVerse{
+  border: 2.5px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  margin-top: 20px;
+  overflow: auto;
+}
+#CorpoCyberVerse::-webkit-scrollbar{
+  width: 0px;
+}
+#ImageItem{
+  width: 80%;
+  border: 2px solid transparent;
+  border-radius: 20px 0px 20px 0px;
+  margin-top: 15px;
+}
+#TitleCyber{
+  font-style: italic;
+  border: 1px solid transparent;
+  color: gold;
+  text-shadow: 3.5px 3.5px 3.5px purple;
+}
+#Descrição{
+  border: 2px solid gold;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  color: black;
+  background: gray;
+  height: 100%;
+}
+.Editar{
+  border: 2px solid white;
+  background: gold;
+}
+.Apagar{
+  border: 2px solid black;
+  background: purple;
+}
+.Editar,.Apagar{
+  display: inline-table;
+  color: #121212;
+  font-size: 25px;
+  width: 10em;
+  height: 1em;
+  margin: auto;
+  margin-left: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+:is(.Editar,.Apagar):hover{
+  filter: invert(1);
+}
